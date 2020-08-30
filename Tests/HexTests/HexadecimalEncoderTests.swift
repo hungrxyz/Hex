@@ -26,7 +26,7 @@ final class HexadecimalEncoderTests: XCTestCase {
 
     /// Expected result generated with:
     /// `echo -n "I am hungry." | xxd -p`.
-    func testEncodeSimpleSentence_withDefaultEncodingOptions_shouldEncodeAsExpected() {
+    func testEncodeSentence_withDefaultEncodingOptions() {
         // given
         let sentence = iAmHungry
         let expectedResult = "4920616d2068756e6772792e"
@@ -41,7 +41,7 @@ final class HexadecimalEncoderTests: XCTestCase {
 
     /// Expected result generated with:
     /// `echo -n "I am hungry." | xxd -p -u`.
-    func testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected() {
+    func testEncodeSentence_withUppercasedOption() {
         // given
         let sentence = iAmHungry
         let expectedResult = "4920616D2068756E6772792E"
@@ -56,7 +56,7 @@ final class HexadecimalEncoderTests: XCTestCase {
 
     /// Expected result generated with:
     /// `echo -n "I am hungry." | xxd -p | sed 's/../& /g'`.
-    func testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected() {
+    func testEncodeSentence_withSeparateOctetsOption() {
         // given
         let sentence = iAmHungry
         let expectedResult = "49 20 61 6d 20 68 75 6e 67 72 79 2e"
@@ -71,7 +71,7 @@ final class HexadecimalEncoderTests: XCTestCase {
 
     /// Expected result generated with:
     /// `echo -n "I am hungry." | xxd -p | sed 's/../& /g'`.
-    func testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected() {
+    func testEncodeSentence_withUppercasedAndSeparateOctetsOptions() {
         // given
         let sentence = iAmHungry
         let expectedResult = "49 20 61 6D 20 68 75 6E 67 72 79 2E"
@@ -83,24 +83,5 @@ final class HexadecimalEncoderTests: XCTestCase {
         // then
         XCTAssertEqual(result, expectedResult)
     }
-
-    static var allTests = [
-        (
-            "testEncodeSimpleSentence_withDefaultEncodingOptions_shouldEncodeAsExpected",
-            testEncodeSimpleSentence_withDefaultEncodingOptions_shouldEncodeAsExpected
-        ),
-        (
-            "testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected",
-            testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected
-        ),
-        (
-            "testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected",
-            testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected
-        ),
-        (
-            "testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected",
-            testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected
-        )
-    ]
     
 }

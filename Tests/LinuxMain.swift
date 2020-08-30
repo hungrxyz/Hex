@@ -1,7 +1,1 @@
-import XCTest
-
-import HexTests
-
-var tests = [XCTestCaseEntry]()
-tests += HexTests.allTests()
-XCTMain(tests)
+fatalError("Run the tests with `swift test --enable-test-discovery`.")
