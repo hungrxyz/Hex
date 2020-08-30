@@ -84,22 +84,22 @@ final class HexadecimalEncoderTests: XCTestCase {
         XCTAssertEqual(result, expectedResult)
     }
 
-    static var allTests: [Any] = [
+    static var allTests = [
         (
             "testEncodeSimpleSentence_withDefaultEncodingOptions_shouldEncodeAsExpected",
             testEncodeSimpleSentence_withDefaultEncodingOptions_shouldEncodeAsExpected
         ),
         (
-            testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected,
-            "testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected"
+            "testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected",
+            testEncodeSimpleSentence_withUppercasedOption_shouldEncodeAsExpected
         ),
         (
-            testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected,
-            "testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected"
+            "testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected",
+            testEncodeSimpleSentence_withSeparateOctetsOption_shouldEncodeAsExpected
         ),
         (
-            testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected,
-            "testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected"
+            "testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected",
+            testEncodeSimpleSentence_withUppercasedAndSeparateOctetsOptions_shouldEncodeAsExpected
         )
     ]
     
